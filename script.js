@@ -5,7 +5,7 @@ let audio = new Audio('music.mp3')
 
 setTimeout(()=>{
     audio.play()
-},2000)
+},1800)
 
 document.onkeydown = function(e){
     if (e.keyCode === 38) {
@@ -51,7 +51,7 @@ setInterval(()=>{
 
         setTimeout(()=>{
             audioGameOver.pause()
-        },2000);
+        },1400);
 
     }else if (offsetX<145 && cross) {
         score+=100;
@@ -65,7 +65,7 @@ setInterval(()=>{
             obstacle.style.animationDuration = aniDur-0.1 + 's'
         },500);
     }
-},100)
+},10)
 
 function updateScore(score) {
     scoreCount.innerHTML = `Your Score : ${score}`
