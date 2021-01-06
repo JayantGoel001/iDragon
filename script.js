@@ -35,6 +35,8 @@ setInterval(()=>{
     if (offsetX<73 && offsetY<52){
         gameOver.style.visibility = 'visible';
         obstacle.classList.remove('obstacleAni')
+        dino.style.visibility = 'hidden';
+        score-=1;
     }else if (offsetX<145 && cross) {
         score+=1;
         updateScore(score);

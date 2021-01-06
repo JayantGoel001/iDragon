@@ -55,4 +55,19 @@
 }
 .gameOver{
     visibility: hidden;
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: sans-serif;
+}
+#scoreCount{
+    color: white;
+    position: absolute;
+    right: 45px;
+    top: 23px;
+    padding: 10px;
+    border: 2px solid white;
+    font-family: sans-serif;
+    width: 112px;
 }
