@@ -58,7 +58,7 @@
     top: 63px;
     font-size: 53px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Ubuntu Mono',sans-serif;
 }
 #scoreCount{
     color: white;
@@ -67,6 +67,6 @@
     top: 23px;
     padding: 10px;
     border: 2px solid white;
-    font-family: sans-serif;
-    width: 112px;
+    font-family: 'Ubuntu Mono',sans-serif;
+    width: 180px;
 }

@@ -4,8 +4,8 @@ let cross = true
 let audio = new Audio('music.mp3')
 
 setTimeout(()=>{
-    audio.play()
-},1800)
+    audio.play();
+},2000)
 
 document.onkeydown = function(e){
     if (e.keyCode === 38) {
@@ -43,15 +43,16 @@ setInterval(()=>{
         gameOver.innerHTML  = 'GAME OVER';
         obstacle.classList.remove('obstacleAni')
         dino.style.visibility = 'hidden';
-        score-=100;
-        audio.pause()
+        audio.pause();
 
         let audioGameOver = new Audio('gameOver.mp3')
-        audioGameOver.play()
 
+        audioGameOver.autoplay = true
+        audioGameOver.play()
         setTimeout(()=>{
             audioGameOver.pause()
-        },1400);
+        },1000);
+        score-=100;
 
     }else if (offsetX<145 && cross) {
         score+=100;
@@ -64,6 +65,7 @@ setInterval(()=>{
             let aniDur = parseFloat(window.getComputedStyle(obstacle,null).getPropertyValue('animation-duration'))
             obstacle.style.animationDuration = aniDur-0.1 + 's'
         },500);
+
     }
 },10)
 
