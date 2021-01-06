@@ -43,13 +43,14 @@ setInterval(()=>{
         gameOver.innerHTML  = 'GAME OVER';
         obstacle.classList.remove('obstacleAni')
         dino.style.visibility = 'hidden';
-        audio.pause();
 
         let audioGameOver = new Audio('gameOver.mp3')
 
         audioGameOver.autoplay = true
         audioGameOver.play()
+        audio.pause();
         setTimeout(()=>{
+
             audioGameOver.pause()
         },1000);
         score-=100;

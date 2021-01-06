@@ -65,8 +65,10 @@
     position: absolute;
     right: 45px;
     top: 23px;
+    font-size: 25px;
+    border-radius: 10px;
     padding: 10px;
     border: 2px solid white;
     font-family: 'Ubuntu Mono',sans-serif;
-    width: 180px;
+    width: 200px;
 }
