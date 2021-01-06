@@ -1,5 +1,12 @@
 let score = 0
 let cross = true
+
+let audio = new Audio('music.mp3')
+
+setTimeout(()=>{
+    audio.play()
+},2000)
+
 document.onkeydown = function(e){
     if (e.keyCode === 38) {
         let dino = document.querySelector('.dino')
@@ -33,12 +40,21 @@ setInterval(()=>{
     let offsetY = Math.abs(oy-dy);
 
     if (offsetX<73 && offsetY<52){
-        gameOver.style.visibility = 'visible';
+        gameOver.innerHTML  = 'GAME OVER';
         obstacle.classList.remove('obstacleAni')
         dino.style.visibility = 'hidden';
-        score-=1;
+        score-=100;
+        audio.pause()
+
+        let audioGameOver = new Audio('gameOver.mp3')
+        audioGameOver.play()
+
+        setTimeout(()=>{
+            audioGameOver.pause()
+        },2000);
+
     }else if (offsetX<145 && cross) {
-        score+=1;
+        score+=100;
         updateScore(score);
         cross=false;
         setTimeout(()=>{

@@ -54,7 +54,6 @@
     }
 }
 .gameOver{
-    visibility: hidden;
     position: relative;
     top: 63px;
     font-size: 53px;
