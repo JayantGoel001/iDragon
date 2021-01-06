@@ -1,10 +1,12 @@
+let score = 0
+let cross = true
 document.onkeydown = function(e){
     if (e.keyCode === 38) {
         let dino = document.querySelector('.dino')
         dino.classList.add('animateDino')
         setTimeout(()=>{
             dino.classList.remove('animateDino')
-        },500);
+        },700);
     }else if (e.keyCode===39){
         let dino = document.querySelector('.dino')
         let dinoX = parseInt(window.getComputedStyle(dino,null).getPropertyValue('left'))
@@ -30,8 +32,23 @@ setInterval(()=>{
     let offsetX = Math.abs(ox-dx);
     let offsetY = Math.abs(oy-dy);
 
-    if (offsetX<93 && offsetY<52){
+    if (offsetX<73 && offsetY<52){
         gameOver.style.visibility = 'visible';
         obstacle.classList.remove('obstacleAni')
+    }else if (offsetX<145 && cross) {
+        score+=1;
+        updateScore(score);
+        cross=false;
+        setTimeout(()=>{
+            cross = true;
+        },1000);
+        setTimeout(()=>{
+            let aniDur = parseFloat(window.getComputedStyle(obstacle,null).getPropertyValue('animation-duration'))
+            obstacle.style.animationDuration = aniDur-0.1 + 's'
+        },500);
     }
 },100)
+
+function updateScore(score) {
+    scoreCount.innerHTML = `Your Score : ${score}`
+}
