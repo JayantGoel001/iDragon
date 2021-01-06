@@ -70,5 +70,6 @@
     padding: 10px;
     border: 2px solid white;
     font-family: 'Ubuntu Mono',sans-serif;
-    width: 200px;
+    width: 250px;
+    text-align: center;
 }
