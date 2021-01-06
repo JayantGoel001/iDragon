@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    overflow: hidden;
 }
 .gameContainer{
     background: url("bg.png") no-repeat;
@@ -25,4 +26,30 @@
     position: absolute;
     bottom: 15px;
     left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.4s linear;
+}
+@keyframes dino {
+    0%{
+        bottom: 15px;
+    }
+    50%{
+        bottom: 270px;
+    }
+    100%{
+        bottom: 15px;
+    }
+}
+.obstacleAni{
+    animation: obstacleAnimation 5s linear infinite;
+}
+@keyframes obstacleAnimation {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
 }
